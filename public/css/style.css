@@ -1,0 +1,57 @@
+body{
+	background-color: darkgreen;
+	color: white;
+}
+
+.pokerPanel {
+	width: 100%;
+	height: 300px;
+	border-radius: 5px;
+	overflow-x: auto;
+	border: 1px solid black;
+	text-align: center;
+}
+
+#lobbyPanel{
+	background-color: white;
+	color: black;
+	
+}
+
+#lobbyList {
+	color: black;
+	background-color: white;
+}
+
+#controlPanel {
+
+	background-color: #2C312E;
+}
+
+#table {
+	width: 100%;
+	border-radius: 10px;
+	background-color: #924A21;
+}
+
+.sitDownBtn {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+}
+
+
+.playerHand {
+	position: absolute;
+}
+
+.playerHand img {
+	position: relative;
+ 	transform-origin: 50% 50%;
+	top: 0px;
+	left: 0px;
+}
+
+.highlightCard {
+	opacity: 0.25;
+}

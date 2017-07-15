@@ -1,0 +1,36 @@
+doctype html
+html
+	include ./head.pug
+
+	body
+		h1.h1 Poker Room
+		div.container
+			div.row
+
+				div.col-sm-9#leftColumn
+					//- First Row - log in and log out buttons
+					div.row
+						// Log in
+						div.col-sm-8.hidden#formContainer
+							form.form-inline(action="/", method="POST")
+								div.form-group
+									label(for="playerName") Name: 
+									input.form-control.form-control-lg#playerName(placeholder="Your Name Here" )
+									button.btn.btn-primary#loginBtn(type="submit") Sit Down
+						// Log out
+						div#welcomeContainer
+							div.col-sm-10#pname
+							form.form-inline.col-sm-2(action="/", method="POST")
+								div.form-group
+									button.btn.btn-danger#logOutBtn(type="submit") Leave Table
+					
+					//- Second Row - Player's hand
+					div.row#myHand
+						div.col-sm-1
+						for(var i = 0; i < 50; i++)
+							div.col-sm-2 Card
+						
+
+				div.col-sm-3#rightColumn
+					div.rounded.bg-white#messages
+	include ./footer.pug

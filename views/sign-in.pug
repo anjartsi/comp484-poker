@@ -1,0 +1,24 @@
+doctype html
+html
+	include ./head.pug
+	body
+		br
+		div.container
+			//- First Row - Login and Logout
+			div.row
+				div.col-sm-12
+					//- First Row - log in and log out buttons
+					div.row
+						// Log in
+						div.col-sm-8#formContainer
+							form.form-inline(action="/", method="POST")
+								div.form-group
+									div.col-sm-2
+										label(for="playerName") Name: 
+									div.col-sm-6
+										input.form-control.form-control-lg#playerName(name="playerName", placeholder="Your Name Here" )
+									div.col-sm-2
+										button.btn.btn-primary#loginBtn(type="submit") Sign In
+
+	include ./footer.pug
+	script(type="text/javascript", src="/scripts/sign-in.js")

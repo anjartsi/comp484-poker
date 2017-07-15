@@ -1,0 +1,35 @@
+doctype html
+html
+	include ./head.pug
+
+	body
+		br
+		div.container
+			//- First Row - Login and Logout
+			div.row
+				div.col-xs-12
+					//- First Row - log in and log out buttons
+					div.row
+						// Log out
+						div#welcomeContainer
+							div.col-xs-8 Welcome 
+								span#playerNameCont #{pName}
+							div.col-xs-4
+								div.form-group
+									block otherBtn
+									button.btn.btn-danger#logOutBtn Log Out
+			br
+			br
+			br
+			//- Second Row - Lobby List and Table
+			div.row
+				div.col-xs-3#leftColumn
+					block panel
+				div.col-xs-9#rightColumn
+					block table
+					
+			br
+			br
+
+	include ./footer.pug
+	block scripts

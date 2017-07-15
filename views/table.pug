@@ -1,0 +1,33 @@
+extends room.pug
+
+block otherBtn
+	button#standUpBtn.btn.btn-warning Stand Up
+
+block table
+	div#table
+		//- There are 4 players
+		-let chairs = ["north", "east", "south", "west"]
+		-for(let i = 0; i < 4; i++) {
+			div.playerHand(id=chairs[i]+"Player")
+				// Each player has 5 cards
+				-for(let j = 0; j < 5; j++) {
+					img(src="/images/card_back.svg")
+				-}
+		-}
+	h1 You are sitting on the #{chair.toUpperCase()} chair
+
+block panel
+	div.pokerPanel#controlPanel
+		div.container-fluid
+			div.row
+				h3.h3(style="text-align: center") Number of players: 
+					span#playerCount 
+			br
+			div.row
+				button.btn.btn-default.btn-block#changeCardsBtn.hidden End Round 1
+				h4.h4 Score: 
+					span#score N/A
+				h4.h4.hidden#messages Waiting for other players to join
+
+block scripts
+	script(type="text/javascript", src="/scripts/table.js")

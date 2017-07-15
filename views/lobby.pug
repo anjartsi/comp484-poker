@@ -1,0 +1,17 @@
+extends room.pug
+
+block table
+	div#table
+		button.btn.btn-primary.sitDownBtn#northChairBtn Sit Down
+		button.btn.btn-primary.sitDownBtn#southChairBtn Sit Down
+		button.btn.btn-primary.sitDownBtn#eastChairBtn Sit Down
+		button.btn.btn-primary.sitDownBtn#westChairBtn Sit Down
+
+block panel
+	div.bg-white.pokerPanel#lobbyPanel
+		h2 Lobby
+		div
+			ul#lobbyList
+
+block scripts
+	script(type="text/javascript", src="/scripts/lobby.js")
